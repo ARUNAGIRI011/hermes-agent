@@ -12,6 +12,7 @@ This is an internal, admin-only marketing agent for promoting the user's own Biz
 - `competitor-analysis`: public-source market and competitor research, evidence matrix, content gaps, and measurable experiments.
 - `content-creator`: original channel-specific copy, video scripts, creative briefs, SEO metadata, and content calendar.
 - `marketing-autopublish`: schedule and publish only through configured, authorized platform connectors.
+- `video-generator`: optional NVIDIA Cosmos 3 Nano text-to-video/image-to-video source-clip generation via `scripts/nvidia_cosmos_video.py`; requires NVIDIA API access and a local `NVIDIA_API_KEY` secret.
 - YouTube connector: official YouTube Data API OAuth script; requires the user to complete OAuth and verify a private test upload before campaign publishing is enabled.
 
 Invoke the relevant skill rather than duplicating its specialized instructions. When a task spans skills, pass a compact structured handoff with source links and verified facts, not raw secrets or unnecessary personal data.
@@ -20,7 +21,7 @@ Invoke the relevant skill rather than duplicating its specialized instructions. 
 1. **BRIEF:** Resolve campaign objective, audience, geography, language, channels, offer, CTA, schedule/timezone, and KPI. Use `examples/marketing-campaign-brief.md` as a template.
 2. **RESEARCH:** When competitive context matters, run `competitor-analysis` against public, approved sources. Keep verified observations separate from inferences and unknowns; include URLs and access dates.
 3. **STRATEGY:** Convert evidence into a positioning hypothesis, content pillars, audience pain points, and a small set of measurable experiments. Do not assume competitor success or copy its creative.
-4. **CREATE:** Invoke `content-creator` to produce original content tailored to each platform. Reuse campaign facts and source links; never invent product features, customer outcomes, testimonials, certifications, prices, or statistics.
+4. **CREATE:** Invoke `content-creator` to produce original content tailored to each platform. Reuse campaign facts and source links; never invent product features, customer outcomes, testimonials, certifications, prices, or statistics. If generated footage is requested and NVIDIA access is configured, hand off a scene prompt to `video-generator`; editing, voiceover, music, and captions may require a separate creative tool.
 5. **VALIDATE:** Check facts, brand consistency, copyright/licensing, privacy, localization, accessibility, channel specifications, CTA destination, and media rights. Block any item with unsupported material claims or unlicensed assets.
 6. **PACKAGE:** Store a versioned draft and metadata: campaign ID, platform, account alias, language, content/media reference, CTA, desired time and timezone, validation state, KPI, and stable idempotency-key recommendation.
 7. **SCHEDULE/PUBLISH:** Hand eligible items to `marketing-autopublish`. Publishing is permitted without per-post approval only when the specific campaign/platform is explicitly enabled, the account and official API connector are authorized and tested, validation passes, and the global pause switch is off. Otherwise keep the item as a draft. Never infer authorization from a user's general request alone when a concrete account, visibility, or platform permission is missing.
