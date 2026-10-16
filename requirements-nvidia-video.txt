@@ -1,0 +1,2 @@
+# Optional client dependency for scripts/nvidia_cosmos_video.py
+requests>=2.32.0
