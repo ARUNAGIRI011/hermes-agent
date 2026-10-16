@@ -12,6 +12,7 @@ Use the optional scripts/nvidia_cosmos_video.py client to generate a source MP4 
 - Hosted default: NVIDIA API Catalog Cosmos3 Nano endpoint https://ai.api.nvidia.com/v1/cosmos/nvidia/cosmos3-nano.
 - Configure NVIDIA_API_KEY in the local environment or secret manager. Never request, print, commit, or include it in prompts/logs.
 - Optional self-hosted endpoint: set NVIDIA_COSMOS_ENDPOINT to a trusted deployment URL. Self-hosted NIM may use a different API route/contract; verify it against that deployment's docs.
+- Local alternative: use the Wan 2.2 Kaggle starter notebook at notebooks/wan22_kaggle_starter.ipynb or run Wan on a compatible GPU you control. Kaggle is quota-limited and temporary, not an unlimited always-on endpoint.
 - Hosted trial availability, request limits, quotas, eligibility and commercial-use terms can change. Do not promise unlimited or permanently free generation. Check current NVIDIA API Catalog terms and account quota.
 - Cosmos3 Nano is primarily a Physical AI/world-generation model; results may be best suited to industrial, robotics, autonomous-driving and simulation concepts. Test suitability for general lifestyle/brand footage before building a campaign around it.
 
