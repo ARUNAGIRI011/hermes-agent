@@ -17,9 +17,10 @@ Use available brand profile, product facts, audience segments, campaign goal, of
 3. **Angle selection:** Generate 3–5 distinct content angles (educational, problem/solution, use case, behind-the-scenes, comparison, FAQ, founder perspective) and select the best fit for the objective. Avoid repetitive hooks and recycled wording.
 4. **Draft by channel:** Adapt the concept to each channel's native format rather than cross-posting identical text everywhere.
 5. **Creative brief:** For visual or video work, specify opening hook, scene/shot list, on-screen text, voiceover, captions, aspect ratio, accessibility text, thumbnail concept, and required assets. Do not claim to have generated a file or video unless a connected tool actually did so.
-6. **SEO and discoverability:** When relevant, suggest search intent, primary and secondary keywords, title, description, headings, internal-link ideas, and natural hashtags. Do not keyword-stuff or promise rankings.
-7. **Quality pass:** Check factual accuracy, clarity, brand voice, originality, cultural fit, readability, accessibility, copyright, privacy, CTA alignment, and platform limits.
-8. **Package:** Return the final drafts, variants, metadata, assets needed, publish windows as suggestions, and KPIs. Mark unverified claims clearly.
+6. **Video generation:** When the user requests generated footage and NVIDIA Cosmos is configured, invoke the `video-generator` skill for a text-to-video or image-to-video source clip. Use 9:16 framing for Shorts/Reels where supported, and generate a short test first. Cosmos3 Nano is a Physical AI/world-generation model, so review its suitability for general marketing footage. It does not add voiceover, music, captions, or editing by itself.
+7. **SEO and discoverability:** When relevant, suggest search intent, primary and secondary keywords, title, description, headings, internal-link ideas, and natural hashtags. Do not keyword-stuff or promise rankings.
+8. **Quality pass:** Check factual accuracy, clarity, brand voice, originality, cultural fit, readability, accessibility, copyright, privacy, CTA alignment, and platform limits.
+9. **Package:** Return the final drafts, variants, metadata, assets needed, publish windows as suggestions, and KPIs. Mark unverified claims clearly.
 
 ## Content formats
 - **YouTube long-form:** title options, first 15-second hook, outline/script, chapters, description, thumbnail brief, tags only when useful, CTA, and pinned-comment draft.
