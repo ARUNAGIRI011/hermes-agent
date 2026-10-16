@@ -1,0 +1,37 @@
+version: 1
+timezone: Asia/Kolkata
+
+# Start disabled. Enable a platform only after API access is configured
+# and a test publication has been verified.
+auto_publish_enabled: false
+pause_all_publishing: true
+
+platforms:
+  instagram:
+    enabled: false
+    approval_mode: campaign_opt_in
+  facebook:
+    enabled: false
+    approval_mode: campaign_opt_in
+  linkedin:
+    enabled: false
+    approval_mode: campaign_opt_in
+  youtube:
+    enabled: false
+    default_visibility: private
+    approval_mode: campaign_opt_in
+  tiktok:
+    enabled: false
+    approval_mode: campaign_opt_in
+
+limits:
+  max_posts_per_platform_per_day: 3
+  max_retry_attempts: 4
+  retry_backoff: exponential
+
+policy:
+  auto_spend_ad_budget: false
+  require_claim_validation: true
+  require_media_validation: true
+  write_audit_log: true
+  idempotent_publish: true
